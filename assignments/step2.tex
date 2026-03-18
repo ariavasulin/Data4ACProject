@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+\title{\textbf{Critical Thinking with Data}\\[0.5em]
+\large Data 4AC --- Step 2: Abstract and Annotated Bibliography}
+\author{Ariav Asulin, Parshv Patel, Emett Mendel}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Abstract}
+
+The foundational tools of modern statistics and data science were built to justify inequality and insinuate that some people are worth more than others. Pearson developed the correlation coefficient to measure ``desirable'' racial traits. Fisher pioneered significance testing while serving as editor of the \textit{Annals of Eugenics}. These are not mere footnotes in the history of data science, yet introductory courses often teach these methods as if they emerged in a vacuum. \textit{Critical Thinking with Data} is a curriculum package (Option B) for high school students (grades 10--12) that teaches introductory statistics in the context of the ideologies that motivated them. Students will learn to use Jupyter notebooks to critically examine real historical data; including Galton's 898-observation height dataset, demographic records from California's forced sterilization program (which disproportionately targeted Latina, Black, Indigenous, and disabled communities), and W.E.B.\ Du Bois's 1900 Paris Exposition visualizations presented alongside eugenic propaganda from the same era. The course structure is designed to introduce statistical tools to students by examining their original analyses, systematically debunking their conclusions using similar techniques, and finally studying the counter-narratives that weaponize data for liberation rather than oppression.
+
+We've designed this course to meet the California AB 101 ethnic studies graduation requirement while also serving as a quantitative reasoning elective, which we hope may apply towards the University of California/California State University Area C mathematics requirement. It fits in neatly with the 10th-grade California World History curriculum, where students are (hopefully) already exposed to the eugenics movement in Europe during the enlightenment. Our course teaches them to examine the methods behind it. By the end, students will have both the technical vocabulary to enter a university data science program and the critical instincts to ask who collected the data, what categories were chosen, and who benefits from the analysis.
+
+\newenvironment{bibentry}
+  {\par\vspace{12pt}\noindent\hangindent=0.5in\hangafter=1\leftskip=0pt}
+  {}
+
+\newenvironment{annotation}
+  {\par\leftskip=0.5in\parindent=0pt}
+  {\par\leftskip=0pt}
+
+\section*{Annotated Bibliography}
+
+\vspace{-12pt}
+
+\begin{bibentry}
+Clayton, Aubrey. \textit{Bernoulli's Fallacy: Statistical Illogic and the Crisis of Modern Science}. New York: Columbia University Press, 2021.
+\end{bibentry}
+\begin{annotation}
+Primary secondary source for readings and reference: Chapters 3 and 4 trace how Galton, Pearson, and Fisher developed foundational statistical methods such as regression, correlation, chi-squared, significance testing, in direct service of eugenic ideology. The book argues that their commitment to frequentist inference was actually politically motivated. We use this to connect specific statistical tools still taught today to their eugenic origins, and to accompany the Jupyter notebook units where students learn each method.
+\end{annotation}
+
+\begin{bibentry}
+Novak, Nicole L., Natalie Lira, Kate E. O'Connor, Siob\'{a}n D. Harlow, Sharon L. R. Kardia, and Alexandra Minna Stern. ``Disproportionate Sterilization of Latinos Under California's Eugenic Sterilization Program, 1920--1945.'' \textit{American Journal of Public Health} 108, no. 5 (2018): 611--13.
+\end{bibentry}
+\begin{annotation}
+Analysis of 17,362 sterilization records from California institutions using Poisson regression standard in intro to Stats, finding that Latina women faced 59\% higher sterilization risk than non-Latina counterparts. Provides quantitative demographic data that students will visualize and analyze in our California sterilization notebook unit, making the racial disparities of eugenic policy legible through the same statistical tools used to justify them.
+\end{annotation}
+
+\begin{bibentry}
+Stern, Alexandra Minna, Nicole L. Novak, Natalie Lira, Kate O'Connor, Siob\'{a}n Harlow, and Sharon Kardia. ``California's Sterilization Survivors: An Estimate and Call for Redress.'' \textit{American Journal of Public Health} 107, no. 1 (2017): 50--54.
+\end{bibentry}
+\begin{annotation}
+The most comprehensive demographic analysis of California's eugenic sterilization program, analyzing 19,995 individual records and estimating 831 survivors were still living as of 2016, 68\% of whom were sterilized as minors. This is a useful companion study to Novak et al., and provides the age distributions and temporal trend data for histogram and time-series exercises, and the fact that most victims were children anchors classroom discussion of eugenic policy's human cost.
+\end{annotation}
+
+\begin{bibentry}
+Galton, Francis. ``Regression Towards Mediocrity in Hereditary Stature.'' \textit{Journal of the Anthropological Institute of Great Britain and Ireland} 15 (1886): 246--263.
+\end{bibentry}
+\begin{annotation}
+This is the paper that introduced regression analysis to statistics, using 898 observations of parent and child heights across 205 families to argue that hereditary traits regress toward a population mean. Students read Galton's original argument, then work with his actual dataset in a Jupyter notebook to compute the regression themselves, discovering that his own data undermines his hereditary determinist thesis\ldots The accompanying dataset is also used in Data 8!
+\end{annotation}
+
+\begin{bibentry}
+Du Bois, W. E. B. \textit{The Georgia Negro: A Social Study} and \textit{A Series of Statistical Charts Illustrating the Condition of the Descendants of Former African Slaves Now in Residence in the United States of America}. Paris: Exposition Universelle, 1900.
+\end{bibentry}
+\begin{annotation}
+Used as a direct counter-narrative to the racial science and eugenic propaganda of the era. Students analyze Du Bois's original plates; his use of color, scale, spiral forms, and annotation, alongside contemporary eugenic charts. TBD whether we will be introducing students to actually making visualizations in python or just studying them as a tool of data science.
+\end{annotation}
+
+\begin{bibentry}
+Benjamin, Ruha. \textit{Race After Technology: Abolitionist Tools for the New Jim Code}. Cambridge: Polity Press, 2019.
+\end{bibentry}
+\begin{annotation}
+Arguably one of the strongest class sources to ultimately tie the discussion back to the present day. Since this course focuses on historical context, we want to ultimately bridge back to contemporary relevance, anchoring the final unit where students trace the line from Galton's regression to today's biased algorithms.
+\end{annotation}
+
+\end{document}
